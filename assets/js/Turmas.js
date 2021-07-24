@@ -1,4 +1,4 @@
-import Turma from './Turma';
+import Turma from './Turma.js'
 
 const turmas = [{
     titulo: 'Baby',
@@ -37,7 +37,6 @@ const turmas = [{
     horarioFinal: '20:30'
 }];
 
-
 const turmasObjects = turmas.map(t => new Turma(t.titulo, t.texto, t.image, t.orientation, t.horarioInicio, t.horarioFinal));
 
-const cards = turmasObjects.map(t => t.appendBootstrapCard());
+export default turmasObjects

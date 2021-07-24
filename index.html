@@ -7,102 +7,45 @@
    <link href="assets/css/bootstrap.css" rel="stylesheet">
    <link href="assets/css/all.css" rel="stylesheet">
    <link href="assets/css/styles.css" rel="stylesheet">
-   <title>Bootstrap</title>
+   <link href="assets/components/Menu.html">
+   <title>Palco Azul - Curso de formação de artistas</title>
 </head>
 
 <body>
-   <nav class="navbar navbar-light bg-light navbar-expand-md fixed-top">
-      <div class="container">
-         <a class="navbar-brand" href="#"><img src="assets/images/logo-redonda-cutout.png" style="width: 90px;"
-               alt="Rio Turismo"></a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" 
-            aria-expanded="false" aria-label="Botão de navegação">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="menu">
-            <div class="navbar-nav mr-auto">
-               <div  id="area-aluno">
-                  <a class="nav-item nav-link" href="#" role="button" data-toggle="modal" data-target="#modalLogin">
-                     Área do Aluno
-                  </a>
-               </div>
-               <div class="dropdown" id="sobre">
-                  <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-                     Sobre
-                  </a>
-                  <div class="dropdown-menu">   
-                     <a class="dropdown-item" href="#">Museus</a>
-                     <a class="dropdown-item" href="#">Feiras</a>
-                     <a class="dropdown-item" href="#">Bibliotecas</a>
-                     <a class="dropdown-item" href="#">Livrarias</a>
-                  </div>
-               </div>
-               <div class="dropdown" id="cursos">
-                  <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-                     Cursos
-                  </a>
-                  <div class="dropdown-menu">   
-                     <a class="dropdown-item" href="#">Museus</a>
-                     <a class="dropdown-item" href="#">Feiras</a>
-                     <a class="dropdown-item" href="#">Bibliotecas</a>
-                     <a class="dropdown-item" href="#">Livrarias</a>
-                  </div>
-               </div>
-               <div class="dropdown" id="projetos">
-                  <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-                     Projetos
-                  </a>
-                  <div class="dropdown-menu">   
-                     <a class="dropdown-item" href="#">Museus</a>
-                     <a class="dropdown-item" href="#">Feiras</a>
-                     <a class="dropdown-item" href="#">Bibliotecas</a>
-                     <a class="dropdown-item" href="#">Livrarias</a>
-                  </div>
-               </div>
-            </div>
-
-            <div class="navbar-nav">
-               <a class="nav-item nav-link"  href="#"><i class="fab fa-whatsapp fa-lg" style="color: #25d366;"></i></a>
-               <a class="nav-item nav-link"  href="#"><i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i></a>
-               <a class="nav-item nav-link"  href="#"><i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i></a>
-               <a class="nav-item nav-link"  href="#"><i class="fab fa-youtube fa-lg" style="color: #ed302f;"></i></a>
-            </div>
-         </div>
-      </div>
-   </nav>
-
+   <nav class="navbar navbar-light bg-light navbar-expand-md fixed-top" id="navbar-palco-azul"></nav>
    <!-- Modal -->
-   <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle" aria-hidden="true">
+   <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"
+      aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">ÁREA DO ALUNO</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
-         <div class="modal-body">
-            <div class="input-group input-group-sm mb-3">
-               <div class="input-group-prepend">
-                 <span class="input-group-text" id="inputGroup-sizing-sm">Login:</span>
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLongTitle">ÁREA DO ALUNO</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text" id="inputGroup-sizing-sm">Login:</span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                </div>
-               <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-             </div>
-             <div class="input-group input-group-sm mb-3">
-               <div class="input-group-prepend">
-                 <span class="input-group-text" id="inputGroup-sizing-sm">Senha:</span>
+               <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text" id="inputGroup-sizing-sm">Senha:</span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                </div>
-               <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-             </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">LOGIN</button>
+               <button type="button" class="btn btn-primary">CADASTRE-SE</button>
+            </div>
          </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">LOGIN</button>
-            <button type="button" class="btn btn-primary">CADASTRE-SE</button>
-         </div>
-      </div>
       </div>
    </div>
-   
+
    <div class="bgimage d-none d-md-block">
    </div>
 
@@ -117,7 +60,7 @@
    <script src="assets/js/jquery-3.3.1.js"></script>
    <script src="assets/js/popper.js"></script>
    <script src="assets/js/bootstrap.js"></script>
-   <script src="assets/js/script.js"></script>
+   <script src="assets/js/initialize.js"></script>
 </body>
 
 </html>

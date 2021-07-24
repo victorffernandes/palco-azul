@@ -5,7 +5,7 @@ export default ({ orientacao, titulo, texto, imagem, horario }) => {
         <p><b>Horário: </b>${horario}</p>
     </div>`
 
-    return `<div class='mb-3 ${cssSide}' style='max-width: 700px;' id='adulto'>
+    return `<div class='mb-3 ${cssSide}' style='max-width: 700px;' id='${titulo}'>
     <div class='row g-0'>
         ${ orientacao === 'left' && imgDiv || ''}
         <div class='col-md-8'>
