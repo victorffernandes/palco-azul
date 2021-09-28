@@ -32,7 +32,7 @@
                             <a class="dropdown-item" href="/alunos/">Dashboard</a>
                             <a class="dropdown-item" href="/alunos/informacao">Dados</a>
                             {% if user.is_authenticated %}
-                                <a class="dropdown-item" href="/autenticacao/logout">Logout</a>
+                            <a class="dropdown-item" href="/autenticacao/logout">Logout</a>
                             {% endif %}
                         </div>
                     </div>
@@ -49,20 +49,20 @@
                             <a class="dropdown-item" href="#">Estrelas</a>
                         </div>
                     </div>
-                    <div class="dropdown" id="cursos">
-                        <a class="nav-item nav-link dropdown-toggle text-white" data-toggle="dropdown"
-                            href="cursos.html">
-                            Cursos
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/cursos#Baby">Baby</a>
-                            <a class="dropdown-item" href="/cursos#Kids">Kids</a>
-                            <a class="dropdown-item" href="/cursos#Teen">Teen</a>
-                            <a class="dropdown-item" href="/cursos#Adulto">Adulto</a>
-                            <a class="dropdown-item" href="/cursos#Particular">Particular</a>
-                            <a class="dropdown-item" href="#Feedback">Feedback</a>
+                    {% if turmas %}
+                        <div class="dropdown" id="cursos">
+                            <a class="nav-item nav-link dropdown-toggle text-white" data-toggle="dropdown"
+                                href="cursos.html">
+                                Cursos
+                            </a>
+                            <div class="dropdown-menu">
+
+                                {% for turma in turmas %}
+                                    <a class="dropdown-item" href="/cursos#{{ turma.nome }}">{{ turma.nome }}</a>
+                                {% endfor %}
+                            </div>
                         </div>
-                    </div>
+                    {% endif %}
                     <div class="dropdown" id="projetos">
                         <a class="nav-item nav-link dropdown-toggle text-white" data-toggle="dropdown"
                             href="projetos.html">
@@ -77,14 +77,16 @@
                 </div>
 
                 <div class="navbar-nav" id="social">
-                    <a class="nav-item nav-link" href="https://api.whatsapp.com/send?phone=5522992068259"><i class="fab fa-whatsapp fa-lg"
-                            style="color: #25d366;"></i></a>
-                    <a class="nav-item nav-link" href="https://www.instagram.com/palcoazul/"><i class="fab fa-instagram fa-lg"
-                            style="color: #ac2bac;"></i></a>
-                    <a class="nav-item nav-link" href="https://www.facebook.com/palcoazulRO/?ref=py_c&__xts__[%252Ffacebook]"><i class="fab fa-facebook-f fa-lg"
-                            style="color: #3b5998;"></i></a>
-                    <a class="nav-item nav-link" href="https://www.youtube.com/channel/UCgtXkI87Ppge1veN74vt7GQ/videos?view=0"><i class="fab fa-youtube fa-lg"
-                            style="color: #ed302f;"></i></a>
+                    <a class="nav-item nav-link" target="_blank" href="https://api.whatsapp.com/send?phone=5522992068259"><i
+                            class="fab fa-whatsapp fa-lg" style="color: #25d366;"></i></a>
+                    <a class="nav-item nav-link" target="_blank" href="https://www.instagram.com/palcoazul/"><i
+                            class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i></a>
+                    <a class="nav-item nav-link" target="_blank"
+                        href="https://www.facebook.com/palcoazulRO/?ref=py_c&__xts__[%252Ffacebook]"><i
+                            class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i></a>
+                    <a class="nav-item nav-link" target="_blank"
+                        href="https://www.youtube.com/channel/UCgtXkI87Ppge1veN74vt7GQ/videos?view=0"><i
+                            class="fab fa-youtube fa-lg" style="color: #ed302f;"></i></a>
                 </div>
             </div>
         </div>
@@ -96,7 +98,7 @@
 
     {% endblock %}
 
-    <footer class="w-100 py-4 flex-shrink-0">
+    <footer class="w-100 navbar sticky-bottom">
         <div class="container py-4">
             <div class="row gy-4 gx-5">
                 <div class="col-lg-4 col-md-6">
@@ -113,19 +115,19 @@
                         <li><a href="/sobre">DÚVIDAS</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-black mb-3">CONTATO</h5>
-                    <p class="small text-muted">Insira seu email que iniciaremos uma conversa o mais rápido possível :)
-                    </p>
-                    <form action="#">
-                        <div class="input-group mb-3">
-                            <input class="form-control" type="text" placeholder="Email" aria-label="Email"
-                                aria-describedby="button-addon2">
-                            <button class="btn btn-primary" id="button-addon2" type="button"><i
-                                    class="fas fa-paper-plane"></i></button>
-                        </div>
-                    </form>
-                </div>
+                <!-- <div class="col-lg-4 col-md-6">
+                        <h5 class="text-black mb-3">CONTATO</h5>
+                        <p class="small text-muted">Insira seu email que iniciaremos uma conversa o mais rápido possível :)
+                        </p>
+                        <form action="#">
+                            <div class="input-group mb-3">
+                                <input class="form-control" type="text" placeholder="Email" aria-label="Email"
+                                    aria-describedby="button-addon2">
+                                <button class="btn btn-primary" id="button-addon2" type="button"><i
+                                        class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div> -->
             </div>
         </div>
     </footer>

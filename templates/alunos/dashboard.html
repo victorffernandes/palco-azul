@@ -1,5 +1,75 @@
 {% extends "../base.html" %}
 
 {% block corpo %}
-   <p> Olaa</p>
-{% endblock %}
+<div class="m-3 align-items-center">
+   <div class="row align-items-start">
+      <div class="col-2"></div>
+      <div class="mt-2 col">
+         <h3> Alunos da Sala {{ aluno.sala }} </h3>
+         <table class=" table" style="max-width: 500px;">
+            <thead>
+               <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Idade</th>
+               </tr>
+            </thead>
+            <tbody>
+               {% for colega in colegas_classe %}
+               <tr>
+                  <th scope="row">{{ colega.id }}</th>
+                  <td>{{ colega.nome }}</td>
+                  <td>{{ colega.email }}</td>
+                  <td>{{ colega.idade }}</td>
+               </tr>
+               {% endfor %}
+            </tbody>
+         </table>
+      </div>
+      {% if aluno_atividades %}
+      <div class="mt-2 col">
+         <h3> Atividades - {{ aluno.sala }} </h3>
+         <table class="table" style="max-width: 500px;">
+            <thead>
+               <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Descricao</th>
+                  <th scope="col">Entregue</th>
+                  <th scope="col">Link</th>
+               </tr>
+            </thead>
+            <tbody>
+               {% for atividade in aluno_atividades %}
+               <tr>
+                  <td> {{ atividade.id }}</td>
+                  <td> {{ atividade.descricao }}</td>
+                  <td> {{ atividade.entregue }}</td>
+                  <td>
+                     <p><a href="{{ atividade.link.url }}" target="_blank">Atividade</a></p>
+                  </td>
+               </tr>
+               {% endfor %}
+            </tbody>
+         </table>
+      </div>
+      {% endif %}
+      <div class="col-2"></div>
+   </div>
+   <div class="row align-items-start">
+      <div class="col-2"></div>
+      <div class="mt-2 col">
+         <h3> Links Importantes </h3>
+         <table class=" table" style="max-width: 500px;">
+            <tbody>
+               <tr>
+                  <th>
+                     <p><a href="/static/pdf/manual-aluno.pdf" target="_blank">Manual do Aluno</a></p>
+                  </th>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="col-2"></div>
+   </div>
+   {% endblock %}

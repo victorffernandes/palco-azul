@@ -1,25 +1,27 @@
 {% extends "base.html" %}
 
 {% block corpo %}
-<form action="" method="POST" novalidate>
-   <div class="mb-5">
-
-      <h5 class="modal-title" id="exampleModalLongTitle">ÁREA DO ALUNO</h5>
-      <div class="input-group input-group-sm mb-3">
-         <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Login:</span>
+<div class="m-1 p-1 flex-d col align-items-center">
+   <form class="col m-1 p-1" action="" method="POST" novalidate>
+      <div class="mb-5">
+   
+         <h5 class="modal-title" id="exampleModalLongTitle">ÁREA DO ALUNO</h5>
+         <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Login:</span>
+            </div>
+            {{ form.username }}
          </div>
-         {{ form.username }}
-      </div>
-      <div class="input-group input-group-sm mb-3">
-         <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Senha:</span>
+         <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+               <span class="input-group-text" id="inputGroup-sizing-sm">Senha:</span>
+            </div>
+            {{ form.password }}
          </div>
-         {{ form.password }}
+         {% csrf_token %}
+         <input type="hidden" name="next" value="{{next}}">
+         <button type="submit" class="btn btn-secondary" value="{{next}}" data-dismiss="modal">LOGIN</button>
       </div>
-      {% csrf_token %}
-      <input type="hidden" name="next" value="{{next}}">
-      <button type="submit" class="btn btn-secondary" value="{{next}}" data-dismiss="modal">LOGIN</button>
-   </div>
-</form>
+   </form>
+</div>
 {% endblock %}

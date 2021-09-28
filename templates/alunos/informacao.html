@@ -1,5 +1,47 @@
 {% extends "../base.html" %}
 
 {% block corpo %}
-   Olaaaa
-{% endblock %}
+<div class="m-3 align-items-center">
+   <div class="row align-items-start">
+      <div class="col-2"></div>
+      <div class="mt-2 col">
+         <h3> Aluno {{ aluno.nome }}  </h3>
+         <div class="col-md-4 mt-2" style="min-width: 150px; max-width: 300px;">
+            <img src="{{ aluno.picture.url }}" class="img-fluid"
+                alt="picture {{ aluno.nome }}">
+        </div>
+         <table class=" table" style="max-width: 500px;">
+            <thead>
+               <tr>
+                  <th scope="col">Informações</th>
+                  <th scope="col">Aluno</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Nome</td>
+                  <td>{{ aluno.nome }}</td>
+               </tr>
+               <tr>
+                  <td>Email</td>
+                  <td>{{ aluno.email }}</td>
+               </tr>
+               <tr>
+                  <td>Idade</td>
+                  <td>{{ aluno.idade }}</td>
+               </tr>
+               <tr>
+                  <td>Turma</td>
+                  <td>{{ aluno.turma }}</td>
+               </tr>
+               <tr>
+                  <td>Sala</td>
+                  <td>{{ aluno.sala }}</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="col-2"></div>
+   </div>
+</div>
+   {% endblock %}

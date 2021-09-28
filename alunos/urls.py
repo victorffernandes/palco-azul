@@ -5,4 +5,5 @@ from alunos import views
 urlpatterns = [
     path('', views.dashboard, name="dashboard"),
     path('informacao', views.informacao_aluno, name="informacao"),
+    path('turmas', views.turmas, name="turmas"),
 ]
