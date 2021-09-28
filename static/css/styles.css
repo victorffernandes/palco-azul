@@ -1,9 +1,14 @@
 .bgimage {
    background-image: url('../images/background.png');
+   background-color: black;
    background-size: cover;
    background-position: center;
    height: 1080px;
 }
+
+footer, nav {
+   background: #B5E2FA;
+ }
 
 .subtitle {
    position: relative;

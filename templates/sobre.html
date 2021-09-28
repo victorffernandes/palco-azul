@@ -1,69 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "./base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="static/css/bootstrap.css" rel="stylesheet">
-    <link href="static/css/all.css" rel="stylesheet">
-    <link href="static/css/styles.css" rel="stylesheet">
-    <title>Bootstrap</title>
-</head>
-
-<body>
-    <nav class="navbar navbar-light bg-light navbar-expand-md fixed-top" id="navbar-palco-azul"></nav>
-
-    <!-- Modal -->
-    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">ÁREA DO ALUNO</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="input-group input-group-sm mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-sm">Login:</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Small"
-                            aria-describedby="inputGroup-sizing-sm">
-                    </div>
-                    <div class="input-group input-group-sm mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-sm">Senha:</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Small"
-                            aria-describedby="inputGroup-sizing-sm">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">LOGIN</button>
-                    <button type="button" class="btn btn-primary">CADASTRE-SE</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
+{% block corpo %}
+<div>
     <div class="container d-flex flex-column" style="margin-top: 120px;">
         <div class="mb-3 align-self-start mr-auto " style="max-width: 700px;">
             <div class="row g-0">
                 <div class="col-md-4 align-self-center">
-                    <img src="./static/images/LOGO-OK.jpg" class="img-fluid" alt="...">
+                    <img src="./static/images/plateia.jpeg" class="img-fluid" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">História</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                            dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                            anim id est laborum.</p>
+                        <h5 class="card-title" id="Historia">História</h5>
+                        <p class="card-text">O Palco Azul começou em 2017 na cidade de Rio das Ostras. Com aulas de
+                            Teatro e Interpretação para crianças e adolescentes.
+                            Em 2020, com a pandemia, passou para o online, abrangendo turma Baby e Adulto! Com alun@s do
+                            Brasil todo!
+                            Aos pouquinhos, voltando ao presencial com parcerias maravilhosas na cidade, a começar pela
+                            Teia Ecolab, em Costa Azul!
+
+                            Venha se divertir com muito aprendizado no Teatro Palco Azul!
+
+                            E aos domingos, enquanto as mamães têm um bate-papo com a psicanalista Elis Barbosa, as
+                            crianças entram no mundo mágico da interpretação!</p>
                     </div>
                 </div>
             </div>
@@ -73,35 +31,66 @@
             <div class="row g-0">
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Metodologia</h5>
-                        <p class="card-text">LSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                            quasi architecto beatae vitae dicta sunt explicabo.
-                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                            consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                            velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
-                            quaerat voluptatem. </p>
+                        <h5 class="card-title" id="Metodologia">Metodologia</h5>
+                        <p class="card-text">O Curso consiste em aulas práticas, com embasamentos
+                            teóricos. Por meio de dinâmicas e exercícios teatrais,
+                            auxilia no desenvolvimento do aluno tanto corporal,
+                            quanto verbal, e ainda psicologicamente. Além dos
+                            exercícios propostos, as aulas possuem momentos de
+                            improviso, estimulando a imaginação, criatividade e
+                            interpretação individual e coletiva. </p>
                     </div>
                 </div>
                 <div class="col-md-4 align-self-center">
-                    <img src="./static/images/LOGO-OK.jpg" class="img-fluid" alt="...">
+                    <img src="./static/images/palco-vermelho.jpeg" class="img-fluid" alt="...">
                 </div>
             </div>
+        </div>
+
+        <div class="mb-3 align-self-start mr-auto " style="max-width: 700px;">
+            <div class="row g-0">
+                <div class="col-md-4 align-self-center">
+                    <img src="./static/images/show-continuar.jpeg" class="img-fluid" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title" id="Teatro">Teatro</h5>
+                        <p class="card-text">O Teatro vem não apenas para aqueles que buscam
+                            serem profissionais na área, mas para todos, para que
+                            possam desenvolver sua sociabilidade, no caso dos mais
+                            tímidos; canalizar a hiperatividade, nos mais agitados;
+                            estimular a expressão e opinião pessoal; conhecer a si
+                            como um todo, seu corpo e voz, alcances e limitações; e
+                            conhecer ao outro, seu espaço e respeito, pois o Teatro
+                            não se faz sozinho.
+                            Que possamos desenvolver tais benefícios, tanto quanto
+                            o gosto e costume, desde pequenos, para que cresçam
+                            jovens e adultos com autonomia e dinamismo, com
+                            paixão pela arte e amor pela vida! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="subtitle">NOSSO BORDÃO</p>
+    <div class="mb-3 d-flex flex-column align-items-center">
+        <div class="col-md-4" style="min-width: 500px;">
+            <img src="./static/images/seguro-minha-mao.jpeg" class="img-fluid" alt="...">
         </div>
     </div>
 
     <p class="subtitle">EQUIPE</p>
 
     <div class="card-group px-5 my-5">
-        <div class="card">
+        <div class="card" id="Equipe">
             <img src="./static//images/leticia.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Letícia Perez</h5>
-                <p class="card-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                    praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                    occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
-                    est laborum et dolorum fuga.</p>
+                <p class="card-text">Letícia Perez é atriz há 17 anos e cineasta há 10.
+                    Leciona Interpretação para Teatro e Cinema no Palco Azul, do qual fundou em 2017. Com diversas
+                    faixas etárias, adapta a pedagogia ideal para cada turma.
+                    Mãe solo da Lucy, de 3 anos, Letícia respira a arte, entendendo essa como alimento da alma!</p>
 
             </div>
         </div>
@@ -121,27 +110,11 @@
                 <p class="card-text">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
                     eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
                 <div>
-                    <p class="bold">Gostaria de avaliar nossos colaboradores?</p>
-                    <div data-likes="9" data-dislikes="0" class="d-flex flex-row justify-content-sm-between" style="width:40%" id="likeable">
-                        <div id="like" >
-                            <button type="button" class="btn" onclick="liked(event)"><i id="like-icon" class="far fa-thumbs-up fa-lg" style="color: #3b5998;"></i></button>
-                            <p id="like-show" ></p>
-                        </div>
-                        <div id="dislike">
-                            <button type="button" class="btn" onclick="disliked(event)"><i id="dislike-icon" class="far fa-thumbs-down fa-lg" style="color: #3b5998;"></i></button>
-                            <p id="dislike-show"></p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="static/js/jquery-3.3.1.js"></script>
-    <script src="static/js/popper.js"></script>
-    <script src="static/js/bootstrap.js"></script>
-    <script src="static/js/initialize.js"></script>
     <script src="static/js/Likeable.js"></script>
-</body>
-
-</html>
+</div>
+{% endblock %}

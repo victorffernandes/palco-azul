@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/all.css" rel="stylesheet">
+    <link href="/static/css/styles.css" rel="stylesheet">
+    <title>Palco Azul - Curso de formação de artistas</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="navbar-palco-azul">
+        <div class="container">
+            <div id="logo">
+                <a class="navbar-brand" href="/"><img src="/static/images/logo-redonda-cutout.png" style="width: 90px;"
+                        alt="Palco Azul"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Botão de navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+                <div class="navbar-nav mr-auto">
+                    <div class="dropdown" id="area-aluno">
+                        <a class="nav-item nav-link dropdown-toggle text-white" data-toggle="dropdown"
+                            href="sobre.html">
+                            Área do Aluno
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/alunos/">Dashboard</a>
+                            <a class="dropdown-item" href="/alunos/informacao">Dados</a>
+                            {% if user.is_authenticated %}
+                                <a class="dropdown-item" href="/autenticacao/logout">Logout</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="dropdown" id="sobre">
+                        <a class="nav-item nav-link dropdown-toggle text-white" data-toggle="dropdown"
+                            href="sobre.html">
+                            Sobre
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/sobre">História</a>
+                            <a class="dropdown-item" href="/sobre#Metodologia">Metodologia</a>
+                            <a class="dropdown-item" href="/sobre#Teatro">Teatro</a>
+                            <a class="dropdown-item" href="/sobre#Equipe">Equipe</a>
+                            <a class="dropdown-item" href="#">Estrelas</a>
+                        </div>
+                    </div>
+                    <div class="dropdown" id="cursos">
+                        <a class="nav-item nav-link dropdown-toggle text-white" data-toggle="dropdown"
+                            href="cursos.html">
+                            Cursos
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/cursos#Baby">Baby</a>
+                            <a class="dropdown-item" href="/cursos#Kids">Kids</a>
+                            <a class="dropdown-item" href="/cursos#Teen">Teen</a>
+                            <a class="dropdown-item" href="/cursos#Adulto">Adulto</a>
+                            <a class="dropdown-item" href="/cursos#Particular">Particular</a>
+                            <a class="dropdown-item" href="#Feedback">Feedback</a>
+                        </div>
+                    </div>
+                    <div class="dropdown" id="projetos">
+                        <a class="nav-item nav-link dropdown-toggle text-white" data-toggle="dropdown"
+                            href="projetos.html">
+                            Projetos
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/projetos#Bibliotecas">Bibliotecas</a>
+                            <a class="dropdown-item" href="/projetos#Filmes">Filmes</a>
+                            <a class="dropdown-item" href="/projetos#Leituras">Leituras</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-nav" id="social">
+                    <a class="nav-item nav-link" href="https://api.whatsapp.com/send?phone=5522992068259"><i class="fab fa-whatsapp fa-lg"
+                            style="color: #25d366;"></i></a>
+                    <a class="nav-item nav-link" href="https://www.instagram.com/palcoazul/"><i class="fab fa-instagram fa-lg"
+                            style="color: #ac2bac;"></i></a>
+                    <a class="nav-item nav-link" href="https://www.facebook.com/palcoazulRO/?ref=py_c&__xts__[%252Ffacebook]"><i class="fab fa-facebook-f fa-lg"
+                            style="color: #3b5998;"></i></a>
+                    <a class="nav-item nav-link" href="https://www.youtube.com/channel/UCgtXkI87Ppge1veN74vt7GQ/videos?view=0"><i class="fab fa-youtube fa-lg"
+                            style="color: #ed302f;"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div style="height: 110px;"></div>
+
+    {% block corpo %}
+
+    {% endblock %}
+
+    <footer class="w-100 py-4 flex-shrink-0">
+        <div class="container py-4">
+            <div class="row gy-4 gx-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="h1 text-black">Palco Azul</h5>
+                    <p class="small text-muted">Com dinâmicas interativas, que desenvolvem a expressão corporal e vocal,
+                        sociabilidade, criatividade, memória, dentre vários outros benefícios!</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-black mb-3">Links Rápidos</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="#">SOBRE</a></li>
+                        <li><a href="/#inscrevase">INSCREVER-SE</a></li>
+                        <li><a href="/sobre">DÚVIDAS</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-black mb-3">CONTATO</h5>
+                    <p class="small text-muted">Insira seu email que iniciaremos uma conversa o mais rápido possível :)
+                    </p>
+                    <form action="#">
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="text" placeholder="Email" aria-label="Email"
+                                aria-describedby="button-addon2">
+                            <button class="btn btn-primary" id="button-addon2" type="button"><i
+                                    class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/jquery-3.3.1.js"></script>
+    <script src="/static/js/popper.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/initialize.js"></script>
+</body>
+
+</html>

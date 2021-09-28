@@ -5,9 +5,10 @@ from django.db import models
 class Aluno(models.Model):
     nome = models.CharField(max_length=60)
     turma = models.CharField(max_length=60)
+    sala = models.CharField(max_length=60)
     idade = models.IntegerField(max_length=5)
     cpf = models.CharField(max_length=12, unique=True)
-    senhaCriptografada = models.CharField(max_length=60)
+    email = models.EmailField(max_length=60)
 
     class Meta:
         db_table='Alunos'
